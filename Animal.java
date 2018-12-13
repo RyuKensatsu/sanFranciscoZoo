@@ -3,9 +3,9 @@ package zoo;
 public class Animal {
     private String type;
     private String name;
-    private Integer hunger;
+    private Integer hunger = 10;
     private Boolean vacinnated = false;
-    private Integer energy;
+    private Integer energy = 10;
 
     public String getType() {
         return type;
@@ -48,10 +48,8 @@ public class Animal {
         this.energy = energy;
     }
 
-    public Animal(String type, String name, Integer hunger, Integer energy) {
+    public Animal(String type, String name) {
         this.type = type;
         this.name = name;
-        this.hunger = hunger;
-        this.energy = energy;
     }
 }
