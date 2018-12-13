@@ -3,10 +3,10 @@ package zoo;
 import java.util.Scanner;
 
 public class AnimalManager implements AnimalManagerImpl{
-    public void feed(Animal cat, Food food){
-        cat.setHunger(cat.getHunger() + food.getHungering());
-        cat.setEnergy(cat.getEnergy() + food.getEnergying());
-        System.out.println(cat.getName() + " has been feeded with " + food.getFoodName() + " !");
+    public void feed(Animal animal, Food food){
+        animal.setHunger(animal.getHunger() + food.getHungering());
+        animal.setEnergy(animal.getEnergy() + food.getEnergying());
+        System.out.println(animal.getName() + " has been feeded with " + food.getFoodName() + " !");
     }
 
     public void vaccinate(Animal patient){
