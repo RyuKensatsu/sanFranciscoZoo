@@ -52,4 +52,5 @@ public class Animal {
         this.type = type;
         this.name = name;
     }
+
 }
