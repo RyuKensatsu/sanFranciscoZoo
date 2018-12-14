@@ -2,7 +2,7 @@ package zoo;
 
 import java.util.Scanner;
 
-public class AnimalManager implements AnimalManagerImpl{
+public class AnimalManager implements AnimalManagerIntf {
     public void feed(Animal animal, Food food){
         animal.setHunger(animal.getHunger() + food.getHungering());
         animal.setEnergy(animal.getEnergy() + food.getEnergying());
@@ -21,14 +21,14 @@ public class AnimalManager implements AnimalManagerImpl{
         System.out.print("Entrez le nom de votre nouvel animal : ");
         final String name = userInput.nextLine();
 
-        Animal radioactif = new Animal(type,name);
-        System.out.println("Vous venez d'adopter " + radioactif.getName() + " !");
-        getStats(radioactif);
-        return radioactif;
+        Animal newAnimal = new Animal(type,name);
+        System.out.println("Vous venez d'adopter " + newAnimal.getName() + " !");
+        getStats(newAnimal);
+        return newAnimal;
     }
 
     public void getStats(Animal animal){
-        System.out.println("Name : " + animal.getName() +  "\nEnergy : " + animal.getEnergy() + "\nHunger : " + animal.getHunger() + "\nVaccinated : " + animal.getVacinnated());
+        System.out.println("Name : " + animal.getName() +  "\nEnergy : " + animal.getEnergy() + "/10\nHunger : " + animal.getHunger() + "/10\nVaccinated : " + animal.getVacinnated());
     }
 
 }
